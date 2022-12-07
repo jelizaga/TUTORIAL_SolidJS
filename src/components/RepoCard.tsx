@@ -16,18 +16,19 @@ interface Props {
   repo: Repo
 }
 
-// 
 const saveRepo = (repo: Repo) => {
   setSavedRepos([repo, ...savedRepos()]);
+  localStorage.setItem('savedRepos', JSON.stringify(savedRepos()));
 }
 
 const unsaveRepo = (repoId: string) => {
   const nextState = savedRepos()?.filter(item => item.id !== repoId);
   setSavedRepos(nextState);
+  localStorage.setItem('savedRepos', JSON.stringify(savedRepos()));
 };
 
 const repoIsSaved = (repoId: string) => {
- const repo = savedRepos()?.filter(item => item.id === repoId);
+ const repo = savedRepos()?.filter((item) => item.id === repoId);
  return repo?.length > 0;
 }
 
@@ -42,25 +43,24 @@ const RepoCard: Component<Props> = ({ repo }) => {
           target="_blank" 
           rel="noreferrer">
           <strong>{repo.owner?.login}/{repo.name}</strong>
-          <p class="card-text">{repo.description}</p>
-          {repoIsSaved(repo.id) 
-          ? (
-            <button
-              class="btn btn-danger" onclick={() => unsaveRepo(repo.id)}
-            >
-              Unsave
-            </button>
-          ) : (
-            <button 
-              class="btn btn-success" 
-              onclick={() => 
-                saveRepo(repo)
-              }
-            >
-              Save
-            </button>
-          )}
         </a>
+        <p class="card-text">{repo.description}</p>
+        {repoIsSaved(repo.id) ? (
+          <button
+            class="btn btn-danger" onclick={() => unsaveRepo(repo.id)}
+          >
+            Unsave
+          </button>
+        ) : (
+          <button 
+            class="btn btn-success" 
+            onclick={() => 
+              saveRepo(repo)
+            }
+          >
+            Save
+          </button>
+        )}
       </div>
     </div>
   )
