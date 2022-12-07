@@ -21,6 +21,16 @@ const saveRepo = (repo: Repo) => {
   setSavedRepos([repo, ...savedRepos()]);
 }
 
+const unsaveRepo = (repoId: string) => {
+  const nextState = savedRepos()?.filter(item => item.id !== repoId);
+  setSavedRepos(nextState);
+};
+
+const repoIsSaved = (repoId: string) => {
+ const repo = savedRepos()?.filter(item => item.id === repoId);
+ return repo?.length > 0;
+}
+
 const RepoCard: Component<Props> = ({ repo }) => {
   return (
     <div class="card">
@@ -33,14 +43,23 @@ const RepoCard: Component<Props> = ({ repo }) => {
           rel="noreferrer">
           <strong>{repo.owner?.login}/{repo.name}</strong>
           <p class="card-text">{repo.description}</p>
-          <button 
-            class="btn btn-success" 
-            onclick={() => 
-              saveRepo(repo)
-            }
-          >
-            Save
-          </button>
+          {repoIsSaved(repo.id) 
+          ? (
+            <button
+              class="btn btn-danger" onclick={() => unsaveRepo(repo.id)}
+            >
+              Unsave
+            </button>
+          ) : (
+            <button 
+              class="btn btn-success" 
+              onclick={() => 
+                saveRepo(repo)
+              }
+            >
+              Save
+            </button>
+          )}
         </a>
       </div>
     </div>
