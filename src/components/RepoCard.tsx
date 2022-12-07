@@ -17,7 +17,7 @@ interface Props {
 
 const RepoCard: Component<Props> = ({ repo }) => {
   return (
-    <div>
+    <div class="card">
       <div class="card-header">&#11088; Stars: {repo.stargazers_count}</div>
       <div class="card-body">
         <a 
