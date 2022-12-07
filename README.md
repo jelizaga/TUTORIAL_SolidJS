@@ -2,59 +2,18 @@
 
 **Source:** [SolidJS Crash Course - Better Than React! / Ebenezer Don](https://www.youtube.com/watch?v=WDodWU-B-aY)
 
-<!-- vim-markdown-toc GFM -->
+## Concept: GitHub repo saver & un-saver
 
-* [Concept](#concept)
-* [Notes](#notes)
-  * [Directory tree](#directory-tree)
-* [Usage](#usage)
-  * [Learn more on the Solid Website and come chat with us on our Discord](#learn-more-on-the-solid-website-and-come-chat-with-us-on-our-discord)
-* [Available Scripts](#available-scripts)
-  * [`npm dev` or `npm start`](#npm-dev-or-npm-start)
-  * [`npm run build`](#npm-run-build)
-* [Deployment](#deployment)
+* Search GitHub repos by username
+* Save & un-save repos of interest
+* Saved repos persist through local storage
 
-<!-- vim-markdown-toc -->
+![Default landing page.](/img/default.png)
+![Searching the repos of a specific GitHub user.](/img/search.png)
+![Collection of saved repos.](/img/saved.png)
 
-## Concept
+## Technologies
 
-## Notes
-
-### Directory tree
-
-<!--
-## Usage
-
-Those templates dependencies are maintained via [pnpm](https://pnpm.io) via `pnpm up -Lri`.
-
-This is the reason you see a `pnpm-lock.yaml`. That being said, any package manager will work. This file can be safely be removed once you clone a template.
-
-```bash
-$ npm install # or pnpm install or yarn install
-```
-
-### Learn more on the [Solid Website](https://solidjs.com) and come chat with us on our [Discord](https://discord.com/invite/solidjs)
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm dev` or `npm start`
-
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br>
-
-### `npm run build`
-
-Builds the app for production to the `dist` folder.<br>
-It correctly bundles Solid in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-## Deployment
-
-You can deploy the `dist` folder to any static host provider (netlify, surge, now, etc.)
--->
+* [SolidJS](https://www.solidjs.com/)
+* [Bootstrap](https://getbootstrap.com/)
+* [Vite](https://vitejs.dev/)

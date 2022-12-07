@@ -23,7 +23,6 @@ const App: Component = () => {
         <Route path="/" element={<Home />} />
         <Route path="/savedrepos" element={<SavedRepos />} />
       </Routes>
-      <h1>App component</h1>
     </div>
   );
 };
