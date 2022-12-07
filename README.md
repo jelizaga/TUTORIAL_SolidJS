@@ -1,3 +1,28 @@
+# TUTORIAL_SolidJS
+
+**Source:** [SolidJS Crash Course - Better Than React! / Ebenezer Don](https://www.youtube.com/watch?v=WDodWU-B-aY)
+
+<!-- vim-markdown-toc GFM -->
+
+* [Concept](#concept)
+* [Notes](#notes)
+  * [Directory tree](#directory-tree)
+* [Usage](#usage)
+  * [Learn more on the Solid Website and come chat with us on our Discord](#learn-more-on-the-solid-website-and-come-chat-with-us-on-our-discord)
+* [Available Scripts](#available-scripts)
+  * [`npm dev` or `npm start`](#npm-dev-or-npm-start)
+  * [`npm run build`](#npm-run-build)
+* [Deployment](#deployment)
+
+<!-- vim-markdown-toc -->
+
+## Concept
+
+## Notes
+
+### Directory tree
+
+<!--
 ## Usage
 
 Those templates dependencies are maintained via [pnpm](https://pnpm.io) via `pnpm up -Lri`.
@@ -32,3 +57,4 @@ Your app is ready to be deployed!
 ## Deployment
 
 You can deploy the `dist` folder to any static host provider (netlify, surge, now, etc.)
+-->
