@@ -1,4 +1,5 @@
 import { Component } from 'solid-js';
+import { setSavedRepos, savedRepos } from '../pages/SavedRepos';
 
 export type Repo = {
   id: string
@@ -15,6 +16,11 @@ interface Props {
   repo: Repo
 }
 
+// 
+const saveRepo = (repo: Repo) => {
+  setSavedRepos([repo, ...savedRepos()]);
+}
+
 const RepoCard: Component<Props> = ({ repo }) => {
   return (
     <div class="card">
@@ -27,7 +33,14 @@ const RepoCard: Component<Props> = ({ repo }) => {
           rel="noreferrer">
           <strong>{repo.owner?.login}/{repo.name}</strong>
           <p class="card-text">{repo.description}</p>
-          <button class="btn btn-success">Save</button>
+          <button 
+            class="btn btn-success" 
+            onclick={() => 
+              saveRepo(repo)
+            }
+          >
+            Save
+          </button>
         </a>
       </div>
     </div>
